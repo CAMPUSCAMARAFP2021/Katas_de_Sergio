@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+
+  node-tools:
+
+    image: node
+
+    command: bash
+
+    working_dir: /app
+
+    volumes:
+
+      - .:/app/
