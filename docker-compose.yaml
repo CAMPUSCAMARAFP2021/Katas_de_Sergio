@@ -2,9 +2,23 @@ version: '2'
 
 services:
 
+  mongo:
+
+    image: mongo
+
+    restart: always
+
+   
+
   node-tools:
 
-    image: node
+    build:
+
+      context: ./
+
+    depends_on:
+
+      - mongo
 
     command: bash
 
